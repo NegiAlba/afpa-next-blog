@@ -2,9 +2,9 @@ import { fetchAPI } from "@lib/api"
 import Seo from '@components/Seo'
 import Moment from 'react-moment'
 import ReactMarkdown from 'react-markdown';
+import Link from "next/link";
 
 const Post = ({post}) => {
-    console.log(post);
     return (
         <>
             <Seo
@@ -22,7 +22,9 @@ const Post = ({post}) => {
                     </div>
                 </div>
             </div> */}
+            
 
+            
             <section className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                 <div className="sm:text-center lg:text-left">
                     <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 md:text-6xl">
@@ -37,9 +39,14 @@ const Post = ({post}) => {
                 </span>
             </div>
             <section className="container">
-                <ReactMarkdown children={post.Content} allowDangerousHtml/>
+                <ReactMarkdown children={post.Content}/>
             </section>
-            
+
+            <div className="container mx-auto rounded-lg text-center my-8">
+                <Link href="/">
+                    <button className="py-3 px-6 text-white rounded-lg bg-purple-600 shadow-lg block md:inline-block"> Back to homepage </button>
+                </Link>
+            </div>
         </>
     )
 }

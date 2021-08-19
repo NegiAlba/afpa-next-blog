@@ -9,7 +9,7 @@ const Navbar = () => {
                     Home
                     </a>
                 </Link>
-                <Link href="/"> 
+                <Link href="/about"> 
                     <a className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-purple-300">
                     About
                     </a>
